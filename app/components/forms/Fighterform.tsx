@@ -63,6 +63,15 @@ export default function Home() {
     event.preventDefault();
     console.log("Form data submitted:", formData);
     addFighter(formData);
+    setFormData({
+      name: "",
+      wins: "",
+      losses: "",
+      isChampion: false,
+      wasChampion: false,
+      country: "",
+      skillLevel: "Average",
+    });
   };
 
   return (
@@ -88,7 +97,7 @@ export default function Home() {
       />
       <input
         className="rounded-md"
-        type="number"
+        type="text"
         name="wins"
         placeholder="Fighter Wins"
         value={formData.wins}
@@ -96,7 +105,7 @@ export default function Home() {
       />
       <input
         className="rounded-md"
-        type="number"
+        type="text"
         name="losses"
         placeholder="Fighter Losses"
         value={formData.losses}
