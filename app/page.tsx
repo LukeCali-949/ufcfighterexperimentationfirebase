@@ -5,6 +5,7 @@ import { useState } from "react";
 
 import Fighterform from "./components/forms/Fighterform";
 import Fighterdisplay from "./components/DataDisplay/Fighterdisplay";
+import SignUp from "./components/Auth/SignUp";
 
 export default function Home() {
   const [display, setDisplay] = useState<boolean>(false);
@@ -21,6 +22,7 @@ export default function Home() {
       >
         Switch
       </button>
+      <SignUp />
       <SnackbarProvider>
         {display ? <Fighterdisplay /> : <Fighterform />}
       </SnackbarProvider>
